@@ -34,7 +34,7 @@ pio.renderers.default = "browser"
 table1.show()
 ```
 
-<img src="images/Table1.png" alt="Plot" width="80%"/>
+<img src="images/Table1.png" alt="Plot" width="90%"/>
 This newly created dataframe will be used for analysis.  The data will be organised into clusters depending on the similarity of responses.
 
 ```python
@@ -72,7 +72,9 @@ for cluster_id in top_cluster_ids:
     fig.show()
 ```
 
-<img src="images/Table2.png" alt="Plot" width="80%"/>
+<img src="images/Table2.png" alt="Plot" width="90%"/>
+
+A pie chart displaying the top five responses is generated.  Inaccuracies were found in group 15, which contained a combination of responses from persons sleeping too late and too early.
 
 
 
