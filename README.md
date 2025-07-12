@@ -5,6 +5,7 @@ Analysing data from a survey on sleep quality in relation to what the person did
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit-learn?style=for-the-badge&logo=scikit-learn&logoColor=white)
 [![Sentence Transformers](https://img.shields.io/badge/Sentence_Transformers-HF%20Models?style=for-the-badge)](https://huggingface.co/sentence-transformers)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
 
 ## The Code 
 Importing the libraries used in this project.
