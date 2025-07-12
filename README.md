@@ -76,7 +76,33 @@ for cluster_id in top_cluster_ids:
 
 A pie chart displaying the top five responses is generated.  Inaccuracies were found in group 15, which contained a combination of responses from persons sleeping too late and too early.
 
+```python
+response_count = []
 
+for cluster_id in top_cluster_ids:
+    cluster_df = data[data['group'] == cluster_id]
+    response_count.append(len(cluster_df))
+
+    fig = go.Figure(data=[go.Table(
+        header=dict(values=list(cluster_df.columns),
+                    fill_color='paleturquoise',
+                    align='left'),
+        cells=dict(values=[cluster_df[col].astype(str) for col in cluster_df.columns],
+                   fill_color='lavender',
+                   align='left'))
+    ])
+
+    fig.update_layout(title_text=f"Group Number {cluster_id} ")
+    pio.renderers.default = "browser"
+    fig.show()
+
+pie = pd.DataFrame({'Group Number': top_cluster_ids , 'Response Count': response_count, 'Key Word' : ['Nothing', 'Early/Late night', 'Stress', 'Late night', 'Exercise']})
+fig2 = px.pie(pie, values='Response Count', names='Key Word',title='Most Common Responses Key Words')
+pio.renderers.default = "browser"
+fig2.show()
+```
+
+<img src="images/PieChart.png" alt="Plot" width="90%"/>
 
 
 
