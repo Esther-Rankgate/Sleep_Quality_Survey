@@ -1,5 +1,5 @@
 # Sleep_Quality_Survey
-Analysing data from a survey on sleep quality in relation to what the person did before bed.  For this project, the data will be cleansed first, then sorted into groups of similar responses for analysis. _[View survey-sleep.xlsx](data-and-code/survey-sleep.xlsx)_ from https://caplena.com/en/blog/text-analytics-getting-started-with-datasets
+Analysing data from a survey on sleep quality in relation to what the person did before bed.  For this project, the data will be cleaned first, then sorted into groups of similar responses for analysis. _[View survey-sleep.xlsx](data-and-code/survey-sleep.xlsx)_ from https://caplena.com/en/blog/text-analytics-getting-started-with-datasets
 
 ## Modules Used:
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
@@ -50,7 +50,7 @@ grouped = data.groupby('group')[column_name].agg(list).reset_index()
 grouped['Number of People'] = grouped[column_name].apply(len) 
 ```
 
-As the total number of groups exceeds 200, tally the group sizes and present the top five most common responses.  The most typical response that influences sleep quality is doing nothing the day before.
+As the total number of groups exceeds 200, tally the group sizes and present the top five most common responses.  For most people, nothing they did the night before influenced their sleep quality. 
 
 ```python
 cluster_counts = data['group'].value_counts().head(5)
@@ -104,6 +104,10 @@ fig2.show()
 ```
 
 <img src="images/PieChart.png" alt="Plot" width="90%"/>
+
+## Relationship between sleep quality and excercise 
+
+
 
 
 
